@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4e7d2">
+<title>KOMARU SHOP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="KOMARU SHOP">
+    <span class="brand-mark">K</span><span><b>KOMARU SHOP</b><small>магазин Мяовл и Комару</small></span>
+  </a>
+  <div class="stats">
+    <div class="stat"><span class="stat-icon coin">₸</span><span><small>Баланс</small><b id="money">2500</b></span></div>
+    <div class="stat"><span class="stat-icon star">✦</span><span><small>Репутация</small><b id="rep">50</b></span></div>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="scene-wrap">
+    <div class="scene-top"><span class="open-dot"></span><span>МАГАЗИН ОТКРЫТ</span><span class="scene-clock">ДЕНЬ 1</span></div>
+    <section class="shop" aria-label="Интерьер магазина">
+      <div class="window-glow"></div>
+      <div class="shop-sign"><span class="sign-spark">✦</span><strong>KOMARU</strong><small>little things, big joy</small></div>
+      <div class="window"><div class="window-cross"></div><div class="plant"><i></i><i></i><i></i></div></div>
+      <div class="shelf shelf-a">
+        <div class="shelf-label">НОВИНКИ</div>
+        <div class="goods">
+          <div class="product-card"><img src="assets/art/pin-meow.svg" alt="Значок Мяовл"><small>ЗНАЧОК</small></div>
+          <div class="product-card"><img src="assets/art/pin-komaru.svg" alt="Значок Комару"><small>ЗНАЧОК</small></div>
+          <div class="product-card"><img src="assets/art/sticker-sheet.svg" alt="Набор наклеек"><small>СТИКЕРЫ</small></div>
+        </div>
+      </div>
+      <div class="shelf shelf-b">
+        <div class="shelf-label">КОЛЛЕКЦИЯ</div>
+        <div class="goods">
+          <div class="product-card tall"><img src="assets/art/mug.svg" alt="Кружка"><small>КРУЖКА</small></div>
+          <div class="product-card tall"><img src="assets/art/tote.svg" alt="Шоппер"><small>ШОППЕР</small></div>
+          <div class="product-card tall"><img src="assets/art/keychain.svg" alt="Брелок"><small>БРЕЛОК</small></div>
+        </div>
+      </div>
+      <div class="door"><div class="door-glass"></div><span>OPEN</span><i></i></div>
+      <div class="customer-zone" id="customers"></div>
+      <div class="counter"><div class="counter-top"></div><div class="counter-front"><span>♡ KOMARU SHOP</span></div></div>
+      <div class="cash-register"><div class="register-screen"></div><div class="register-base"></div></div>
+      <div class="seller" id="seller"><div class="seller-hair"></div><div class="seller-face"><i class="eye left"></i><i class="eye right"></i><i class="smile"></i></div><div class="seller-body"></div></div>
+      <div class="floor"></div>
+      <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    </section>
+    <div class="scene-caption"><span>Уютный магазинчик мерча</span><span>✦</span><span>Каждый покупатель — новая история</span></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-heading"><div><span class="eyebrow">РАБОЧИЙ ДЕНЬ</span><h1>Торговля</h1></div><span class="phase" id="phase">Ожидание</span></div>
+    <p class="message" id="message">Магазин готов к работе. Нажми кнопку, чтобы встретить первого покупателя.</p>
+    <div class="dialog hidden" id="dialog">
+      <div class="customer-heading"><div class="mini-avatar" id="mini-avatar"></div><div><b id="customer-name"></b><small>посетитель магазина</small></div></div>
+      <p id="question"></p>
+      <div id="price-area"></div>
+      <div class="actions" id="actions"></div>
+    </div>
+    <div class="roulette hidden" id="roulette"><div class="wheel-shell"><div class="wheel" id="wheel"><span>✦</span></div></div><b id="roulette-result">Покупатель обдумывает предложение…</b></div>
+    <div class="stock-panel">
+      <div class="section-title"><h2>Витрина</h2><span>4 товара</span></div>
+      <div class="stock-list">
+        <div class="stock-item"><img src="assets/art/pin-meow.svg"><span><b>Значок Мяовл</b><small>12 шт. на складе</small></span><strong>500 ₸</strong></div>
+        <div class="stock-item"><img src="assets/art/pin-komaru.svg"><span><b>Значок Комару</b><small>10 шт. на складе</small></span><strong>600 ₸</strong></div>
+        <div class="stock-item"><img src="assets/art/sticker-sheet.svg"><span><b>Набор наклеек</b><small>8 шт. на складе</small></span><strong>350 ₸</strong></div>
+        <div class="stock-item"><img src="assets/art/mug.svg"><span><b>Кружка</b><small>6 шт. на складе</small></span><strong>1200 ₸</strong></div>
+      </div>
+    </div>
+    <button id="next" class="primary"><span>Начать рабочий день</span><b>→</b></button>
+    <div class="footer-note"><span class="note-mark">✦</span> Продавай с заботой — репутация растёт вместе с магазином.</div>
+  </section>
+</main>
+<script src="js/customers.js"></script><script src="js/economy.js"></script><script src="js/roulette.js"></script><script src="js/animations.js"></script><script src="js/save.js"></script><script src="js/game.js"></script>
+</body></html>
